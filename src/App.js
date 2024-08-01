@@ -4,6 +4,7 @@ import SignupComponent, { action as signUpAction } from './pages/SignupComponent
 import LoginModal, { action as authAction } from './pages/LoginModal';
 import RootLayout from './pages/Root';
 import ErrorPage from './pages/Error';
+import FaqComponent from './pages/FaqComponent';
 import './App.css';
 
 import { tokenLoader } from './util/auth';
@@ -26,7 +27,9 @@ const router = createBrowserRouter([
       { path: '/logout', action: logoutAction },
       { path: '/todos', element: <ListTodosComponent />, loader: todosLoader },
       { path: '/addTodo', element: <AddTodoComponent />, action: addTodoAction },
-      { path: '/updateTodo/:id', element: <UpdateTodoComponent />, loader: updateTodoLoader, action: updateTodoAction }
+      { path: '/updateTodo/:id', element: <UpdateTodoComponent />, loader: updateTodoLoader, action: updateTodoAction },
+      { path: '/faq', element: <FaqComponent/>}
+
     ]
   }
 ]);
